@@ -10,7 +10,7 @@ import madmom
 import random
 import scipy
 import cv2
-
+from visualize import save_dance
 
 random.seed(123)
 
@@ -384,6 +384,8 @@ if __name__ == "__main__":
             best_music_array = change_in_states
             best_song = songpath
 
+                  
+        save_dance(states=states, songpath=best_song, duration=duration, num_steps=num_steps)
 
     print("best song: " + best_song)
     
